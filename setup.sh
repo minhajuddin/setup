@@ -7,16 +7,15 @@ sudo apt-get dist-upgrade -y
 sudo apt-get upgrade -y
 
 #install required software
-sudo apt-get install openssh-server vim-gnome curl git-core bison build-essential zlib1g-dev libssl-dev libreadline6-dev libxml2-dev autoconf libxslt1-dev libpq-dev postgresql mutt parcellite alarm-clock gtimelog gnome-do emacs23 irssi shutter gimp deluge vlc htop pidgin ctags gitk git-gui vifm xmonad xmobar dzen2 -y
+sudo apt-get install openssh-server vim-gnome curl git-core bison build-essential zlib1g-dev libssl-dev libreadline6-dev libxml2-dev autoconf libxslt1-dev libpq-dev postgresql mutt parcellite alarm-clock gtimelog gnome-do emacs23 irssi shutter gimp deluge vlc htop pidgin ctags gitk git-gui vifm xmonad xmobar -y
 
 #install rvm
-bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
 #tweak bashrc
 mkdir ~/archives
-cp ~/.bashrc ~/archives
-sed  -e 's/\[ -z "\$PS1" \] && return/if \[\[ ! -z "\$PS1" \]\] ; then/g' ~/archives/.bashrc  > /tmp/newbash && echo 'fi' >> /tmp/newbash
-cp /tmp/newbash ~/.bashrc
+mv ~/.bashrc ~/archives/
 #install ruby 1.9.2
+exec bash
 rvm install 1.9.2
 rvm --default 1.9.2
 rvm use 1.9.2
