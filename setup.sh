@@ -7,7 +7,9 @@ sudo apt-get dist-upgrade -y
 sudo apt-get upgrade -y
 
 #install required software
-sudo apt-get install openssh-server vim-gnome curl git-core bison build-essential zlib1g-dev libssl-dev libreadline6-dev libxml2-dev autoconf libxslt1-dev libpq-dev postgresql mutt parcellite alarm-clock gtimelog gnome-do emacs23 irssi shutter gimp deluge vlc htop pidgin ctags gitk git-gui vifm xmonad xmobar -y
+sudo apt-get install openssh-server vim-gnome curl git-core bison build-essential zlib1g-dev libssl-dev libreadline6-dev libxml2-dev autoconf libxslt1-dev libpq-dev postgresql mutt parcellite alarm-clock gtimelog gnome-do emacs23 irssi shutter gimp deluge vlc htop pidgin ctags gitk git-gui vifm libgmp3c2 libgmpxx4ldbl libgmp3-dev-y
+
+echo "install ghc using source"
 
 #install rvm
 bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
